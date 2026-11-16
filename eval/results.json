@@ -1,0 +1,592 @@
+{
+  "cases": {
+    "1": {
+      "steps": {
+        "open": {
+          "ok": true,
+          "hash": "0x6cc1461ba75578f0316c801ff0ca5de163e705445f9501a730e1c9fd7e002617",
+          "returned": 2,
+          "detail": "",
+          "at": "2026-11-16T20:39:50Z"
+        },
+        "join": {
+          "ok": true,
+          "hash": "0xacd1f26b9bdf0b71ac5711d8b1c069ac08e271df9cf485f15c1b29e765a903f1",
+          "returned": 2,
+          "detail": "",
+          "at": "2026-11-16T20:39:59Z"
+        },
+        "restate": {
+          "ok": true,
+          "hash": "0xa59da85b620cdeb36735797584fce32a5ab06a9541b1e7f5ba5ddb0b21e9e30d",
+          "returned": 1,
+          "detail": "",
+          "at": "2026-11-16T20:40:06Z"
+        },
+        "contest": {
+          "ok": true,
+          "hash": "0xbd1def297ba27728ef5d6fb416c73e8afc7134d972dc78e6104d7b90c4e8e3cb",
+          "returned": 1,
+          "detail": "",
+          "at": "2026-11-16T20:40:14Z"
+        }
+      },
+      "tries": [
+        {
+          "tx": "0x7982a671bc2091851497d99bb0eda121c450383da0bfc6a66c94f42135269f0c",
+          "sent_at": "2026-11-16T20:40:43Z",
+          "consensus": "decided"
+        }
+      ],
+      "thread_id": 2,
+      "label": "INCOMPLETE",
+      "turn_status": "STATED",
+      "judge_tx": "0x7982a671bc2091851497d99bb0eda121c450383da0bfc6a66c94f42135269f0c",
+      "thread_status": "ACTIVE"
+    },
+    "2": {
+      "steps": {
+        "open": {
+          "ok": true,
+          "hash": "0x32597fdf7ab20af844c0a29ad01a307d556bd75f03588f8c015cb01cb25a9446",
+          "returned": 3,
+          "detail": "",
+          "at": "2026-11-16T20:40:51Z"
+        },
+        "join": {
+          "ok": true,
+          "hash": "0x7db3bec5f7691eabfe03e57c2dd49ec9291f6ca557038857297d5f1c4dcd1b95",
+          "returned": 3,
+          "detail": "",
+          "at": "2026-11-16T20:40:59Z"
+        },
+        "restate": {
+          "ok": true,
+          "hash": "0x9f90dfee8be86ba1f69b37c7a0d35d28a0adac1f136787640ab7828f7f301e7b",
+          "returned": 1,
+          "detail": "",
+          "at": "2026-11-16T20:41:07Z"
+        },
+        "contest": {
+          "ok": true,
+          "hash": "0xa1b621d86e357780f0c0dc39e2aa1e36f3741c6d8ee51f421cbc3fa227cd0af8",
+          "returned": 1,
+          "detail": "",
+          "at": "2026-11-16T20:41:15Z"
+        }
+      },
+      "tries": [
+        {
+          "tx": "0xdbb8217e9302ca42e2753f274e5546232c1e3eb460ace61d2921d9748c5752e5",
+          "sent_at": "2026-11-16T20:41:29Z",
+          "consensus": "decided"
+        }
+      ],
+      "thread_id": 3,
+      "label": "FAIR",
+      "turn_status": "FAIR",
+      "judge_tx": "0xdbb8217e9302ca42e2753f274e5546232c1e3eb460ace61d2921d9748c5752e5",
+      "thread_status": "ACTIVE"
+    },
+    "3": {
+      "steps": {
+        "open": {
+          "ok": true,
+          "hash": "0xc4a5ff3d6b55eb3d2d5ae376d97ea451fd6643513ec43641b531539e9ff8f592",
+          "returned": 4,
+          "detail": "",
+          "at": "2026-11-16T20:41:43Z"
+        },
+        "join": {
+          "ok": true,
+          "hash": "0x2bd80e140cd4404de093e7dc30856a3941e31f63ba33f2e03c2eda558d749662",
+          "returned": 4,
+          "detail": "",
+          "at": "2026-11-16T20:41:51Z"
+        },
+        "restate": {
+          "ok": true,
+          "hash": "0x72a9eb808e555c5b49cd675401ba60d5e7d762481f6f47ab12639991ca29a8fb",
+          "returned": 1,
+          "detail": "",
+          "at": "2026-11-16T20:41:59Z"
+        },
+        "contest": {
+          "ok": true,
+          "hash": "0xbc52c868862ebf36b64d484b2a682fdd796246dd9f55fc8f0aad0d51fd7d9e85",
+          "returned": 1,
+          "detail": "",
+          "at": "2026-11-16T20:42:07Z"
+        }
+      },
+      "tries": [
+        {
+          "tx": "0xd5a20363f52858ae1361f69ddf57e08a811abcc0eeea6105cbc50a3f3df4c9d6",
+          "sent_at": "2026-11-16T20:42:22Z",
+          "consensus": "decided"
+        }
+      ],
+      "thread_id": 4,
+      "label": "INCOMPLETE",
+      "turn_status": "STATED",
+      "judge_tx": "0xd5a20363f52858ae1361f69ddf57e08a811abcc0eeea6105cbc50a3f3df4c9d6",
+      "thread_status": "ACTIVE"
+    },
+    "4": {
+      "steps": {
+        "open": {
+          "ok": true,
+          "hash": "0x7e671cc916c133f0d85c6ab6427e1d228890bba39fc237fd1d0043a510eaed7a",
+          "returned": 5,
+          "detail": "",
+          "at": "2026-11-16T20:42:30Z"
+        },
+        "join": {
+          "ok": true,
+          "hash": "0x23240a2a587e78f0c01c63306a5665dab9416d92f64ba00d2b312d325f2129e2",
+          "returned": 5,
+          "detail": "",
+          "at": "2026-11-16T20:42:44Z"
+        },
+        "restate": {
+          "ok": true,
+          "hash": "0xb8125c10902a624dbdda0ada31c9b0e055add9fe5d353b77ecd5d549baf0d539",
+          "returned": 1,
+          "detail": "",
+          "at": "2026-11-16T20:42:52Z"
+        },
+        "contest": {
+          "ok": true,
+          "hash": "0x554239aad882acbda2eb8e28b6515a2b7b064489b0c266944b105db0893d7796",
+          "returned": 1,
+          "detail": "",
+          "at": "2026-11-16T20:43:00Z"
+        }
+      },
+      "tries": [
+        {
+          "tx": "0x62c0d45b718c40874970deaaa1881181a6fa2743762ba03c79aaf3a6a94d63ab",
+          "sent_at": "2026-11-16T20:43:24Z",
+          "consensus": "decided"
+        }
+      ],
+      "thread_id": 5,
+      "label": "INCOMPLETE",
+      "turn_status": "STATED",
+      "judge_tx": "0x62c0d45b718c40874970deaaa1881181a6fa2743762ba03c79aaf3a6a94d63ab",
+      "thread_status": "ACTIVE"
+    },
+    "5": {
+      "steps": {
+        "open": {
+          "ok": true,
+          "hash": "0x4ec5e67fe5a1d801e38280b49a0ade4e9483e2ac6a004622b85fc36525944699",
+          "returned": 6,
+          "detail": "",
+          "at": "2026-11-16T20:43:34Z"
+        },
+        "join": {
+          "ok": true,
+          "hash": "0xf836f63a4dc5bff3a400834583f66931c1e552ad57337c450e1f76c0cf766a0a",
+          "returned": 6,
+          "detail": "",
+          "at": "2026-11-16T20:43:42Z"
+        },
+        "restate": {
+          "ok": true,
+          "hash": "0x1b60882362febac1a2103ad0c2a5d86eb3c49705bfbfa313d52e33f88f74bad8",
+          "returned": 1,
+          "detail": "",
+          "at": "2026-11-16T20:43:50Z"
+        },
+        "contest": {
+          "ok": true,
+          "hash": "0x005b12b1bb61232cf2e54fc2be7cee6eb65798f0ba6e0ea4268f17914c7136cc",
+          "returned": 1,
+          "detail": "",
+          "at": "2026-11-16T20:43:58Z"
+        }
+      },
+      "tries": [
+        {
+          "tx": "0xc1f040233826310f5eb48e07b99ef4ab668879074847815e72010fe328759428",
+          "sent_at": "2026-11-16T20:44:18Z",
+          "consensus": "decided"
+        }
+      ],
+      "thread_id": 6,
+      "label": "INCOMPLETE",
+      "turn_status": "STATED",
+      "judge_tx": "0xc1f040233826310f5eb48e07b99ef4ab668879074847815e72010fe328759428",
+      "thread_status": "ACTIVE"
+    },
+    "6": {
+      "steps": {
+        "open": {
+          "ok": true,
+          "hash": "0xf47b3886932738fa2fbaea10e999a8c725ecc75e4f3f3ce8d7f69ab1c9fb3762",
+          "returned": 7,
+          "detail": "",
+          "at": "2026-11-16T20:44:27Z"
+        },
+        "join": {
+          "ok": true,
+          "hash": "0x09a08ae7087e77a9556e5f0879d4401c719dfd8e34fb979fbad0710a87c7a970",
+          "returned": 7,
+          "detail": "",
+          "at": "2026-11-16T20:44:35Z"
+        },
+        "restate": {
+          "ok": true,
+          "hash": "0x2a7a884c729773e5e4565d1ceec9fc67e8fae929947c9b0d547e2d311ac10652",
+          "returned": 1,
+          "detail": "",
+          "at": "2026-11-16T20:44:43Z"
+        },
+        "contest": {
+          "ok": true,
+          "hash": "0xbf6ffd355e44773f1d95dc23dd0aa79c130ae2e20ce5066ff691d82ca8682597",
+          "returned": 1,
+          "detail": "",
+          "at": "2026-11-16T20:44:51Z"
+        }
+      },
+      "tries": [
+        {
+          "tx": "0x49292354ac47fd8a3db0a25b6231f3ef09d57dff9b36cc2d4d9980a778062044",
+          "sent_at": "2026-11-16T20:45:11Z",
+          "consensus": "decided"
+        }
+      ],
+      "thread_id": 7,
+      "label": "DISTORTED",
+      "turn_status": "STATED",
+      "judge_tx": "0x49292354ac47fd8a3db0a25b6231f3ef09d57dff9b36cc2d4d9980a778062044",
+      "thread_status": "ACTIVE"
+    },
+    "7": {
+      "steps": {
+        "open": {
+          "ok": true,
+          "hash": "0x2337ff5893ec64f04b756fb38b3a720a97c074319b0fe760bc234bfc214d1b63",
+          "returned": 8,
+          "detail": "",
+          "at": "2026-11-16T20:45:21Z"
+        },
+        "join": {
+          "ok": true,
+          "hash": "0x4cdf0ea086dbea7ff6c2788e6cdd276b35d1acee0ae3dfb483dd5efe58f6c664",
+          "returned": 8,
+          "detail": "",
+          "at": "2026-11-16T20:45:29Z"
+        },
+        "restate": {
+          "ok": true,
+          "hash": "0xbcb17309ab855f37855db5f03efafe3ff03b1ad664bf473847b6caec932a33c4",
+          "returned": 1,
+          "detail": "",
+          "at": "2026-11-16T20:45:37Z"
+        },
+        "contest": {
+          "ok": true,
+          "hash": "0x74484db94c0cd458451ed6409ecaf327f3b090056b8a48099897d6de50c273c7",
+          "returned": 1,
+          "detail": "",
+          "at": "2026-11-16T20:45:45Z"
+        }
+      },
+      "tries": [
+        {
+          "tx": "0xace1f1016dacbaa30a477a0e5980136e151a292aef273ca5d2a9f66a996ebfdc",
+          "sent_at": "2026-11-16T20:45:59Z",
+          "consensus": "decided"
+        }
+      ],
+      "thread_id": 8,
+      "label": "DISTORTED",
+      "turn_status": "STATED",
+      "judge_tx": "0xace1f1016dacbaa30a477a0e5980136e151a292aef273ca5d2a9f66a996ebfdc",
+      "thread_status": "ACTIVE"
+    },
+    "8": {
+      "steps": {
+        "open": {
+          "ok": true,
+          "hash": "0x65d1eda0edbe5bd30abf1f2f3592fef81f672a13604a7414c377650cf17406d3",
+          "returned": 9,
+          "detail": "",
+          "at": "2026-11-16T20:46:09Z"
+        },
+        "join": {
+          "ok": true,
+          "hash": "0x6f36847a38d392feea903d8a1332e388861e63138e21dfb1beee8c3a317ca88b",
+          "returned": 9,
+          "detail": "",
+          "at": "2026-11-16T20:46:17Z"
+        },
+        "restate": {
+          "ok": true,
+          "hash": "0x870715f30d585710d93de0dd8f466f015f2bed343a1d22fa29a257f33fcdd47d",
+          "returned": 1,
+          "detail": "",
+          "at": "2026-11-16T20:46:31Z"
+        },
+        "contest": {
+          "ok": true,
+          "hash": "0xa1b7814f937b71bbc44688b6bdf07d024132d9e0401f2cd20258111ab301cdfd",
+          "returned": 1,
+          "detail": "",
+          "at": "2026-11-16T20:46:40Z"
+        }
+      },
+      "tries": [
+        {
+          "tx": "0xbdbbcef145e8a695c4e1e0971729f16721eebc090569359fec85ec6ff0cbf87a",
+          "sent_at": "2026-11-16T20:47:10Z",
+          "consensus": "decided"
+        }
+      ],
+      "thread_id": 9,
+      "label": "DISTORTED",
+      "turn_status": "STATED",
+      "judge_tx": "0xbdbbcef145e8a695c4e1e0971729f16721eebc090569359fec85ec6ff0cbf87a",
+      "thread_status": "ACTIVE"
+    },
+    "9": {
+      "steps": {
+        "open": {
+          "ok": true,
+          "hash": "0xb904cd532739c3987214112e139da3b22d7bbfe1cc31867131182c49eba4e4ad",
+          "returned": 11,
+          "detail": "",
+          "at": "2026-11-16T20:47:20Z"
+        },
+        "join": {
+          "ok": true,
+          "hash": "0x0ad2e08c3ce077c83b2d1e351dc39962c98a839025c911ff21490d43ee43a71e",
+          "returned": 11,
+          "detail": "",
+          "at": "2026-11-16T20:47:28Z"
+        },
+        "restate": {
+          "ok": true,
+          "hash": "0x559e93a58341b7d04613cc705e8cca2e9cae8d2f0e7fdb0ff9f8939f18b18d1d",
+          "returned": 1,
+          "detail": "",
+          "at": "2026-11-16T20:47:41Z"
+        },
+        "contest": {
+          "ok": true,
+          "hash": "0x3b934de7daf24932ad2b54686cdb439c505165240c723b6349f586cfead58495",
+          "returned": 1,
+          "detail": "",
+          "at": "2026-11-16T20:47:49Z"
+        }
+      },
+      "tries": [
+        {
+          "tx": "0x5c7dfa0cee921db1ab4b86d60c75e222b0f25c0f1cf8a76ca7c2ac8dbefdcd67",
+          "sent_at": "2026-11-16T20:48:20Z",
+          "consensus": "decided"
+        }
+      ],
+      "thread_id": 11,
+      "label": "DISTORTED",
+      "turn_status": "STATED",
+      "judge_tx": "0x5c7dfa0cee921db1ab4b86d60c75e222b0f25c0f1cf8a76ca7c2ac8dbefdcd67",
+      "thread_status": "ACTIVE"
+    },
+    "10": {
+      "steps": {
+        "open": {
+          "ok": true,
+          "hash": "0x381e4040f0016977f9ff4f551265c3c66c844513f53606072e97f032ffd3e344",
+          "returned": 12,
+          "detail": "",
+          "at": "2026-11-16T20:48:29Z"
+        },
+        "join": {
+          "ok": true,
+          "hash": "0xd94de2939d2bd80a555e04aedd9b0d450b7cfedbebab6553947ecec7fd8258bb",
+          "returned": 12,
+          "detail": "",
+          "at": "2026-11-16T20:48:37Z"
+        },
+        "restate": {
+          "ok": true,
+          "hash": "0x0c197c8f99e8aff805aa9cfbf5630eb1c28d2ba82e5e82dd0ddae6c6a03afebd",
+          "returned": 1,
+          "detail": "",
+          "at": "2026-11-16T20:48:45Z"
+        },
+        "contest": {
+          "ok": true,
+          "hash": "0x71ba2371118ff064417b7c6fb6003de1fb42aca793c965d58368ffba9448c568",
+          "returned": 1,
+          "detail": "",
+          "at": "2026-11-16T20:49:00Z"
+        }
+      },
+      "tries": [
+        {
+          "tx": "0x11718e68b915f4509e18ab5544d2f0a74e4e220c6f5d4263927d6738bb55c7d5",
+          "sent_at": "2026-11-16T20:49:20Z",
+          "consensus": "decided"
+        }
+      ],
+      "thread_id": 12,
+      "label": "DISTORTED",
+      "turn_status": "STATED",
+      "judge_tx": "0x11718e68b915f4509e18ab5544d2f0a74e4e220c6f5d4263927d6738bb55c7d5",
+      "thread_status": "ACTIVE"
+    },
+    "H1": {
+      "steps": {
+        "open": {
+          "ok": true,
+          "hash": "0x12b2824e69e836fae9be736dee33dd4d603db2a5550ee4e5ba0b8b3d5e31a80d",
+          "returned": 13,
+          "detail": "",
+          "at": "2026-11-16T20:49:31Z"
+        },
+        "join": {
+          "ok": true,
+          "hash": "0x5d375ab078980e6c956255890834356802dfb268dc8eba8dc4a2650f8d5906a8",
+          "returned": 13,
+          "detail": "",
+          "at": "2026-11-16T20:49:45Z"
+        },
+        "restate": {
+          "ok": true,
+          "hash": "0xd9e8fd291ea9d5863c7346fc083894d1786bacd719de8294569a1b4f307a79b7",
+          "returned": 1,
+          "detail": "",
+          "at": "2026-11-16T20:49:54Z"
+        },
+        "contest": {
+          "ok": true,
+          "hash": "0x206034c399726394e5b67672e6a68a8f16a8a76b18be0d4e02267829d1fa70c1",
+          "returned": 1,
+          "detail": "",
+          "at": "2026-11-16T20:50:03Z"
+        }
+      },
+      "tries": [
+        {
+          "tx": "0xbe33e8cc5814762e81abd96f4ad022b97f207befcb6b3b253522c8116f989a64",
+          "sent_at": "2026-11-16T20:50:16Z",
+          "consensus": "decided"
+        }
+      ],
+      "thread_id": 13,
+      "label": "DISTORTED",
+      "turn_status": "STATED",
+      "judge_tx": "0xbe33e8cc5814762e81abd96f4ad022b97f207befcb6b3b253522c8116f989a64",
+      "thread_status": "ACTIVE"
+    },
+    "H2": {
+      "steps": {
+        "open": {
+          "ok": true,
+          "hash": "0xcfeef6f529ad5a52258bb0853546f2b633788637b23cb7b5c0960b44f1e6d773",
+          "returned": 14,
+          "detail": "",
+          "at": "2026-11-16T20:50:25Z"
+        },
+        "join": {
+          "ok": true,
+          "hash": "0x72f9ade5b80ed1107dc3c76aa67c63d7dfeebf09e2bb8a3c52fd26732286a253",
+          "returned": 14,
+          "detail": "",
+          "at": "2026-11-16T20:50:38Z"
+        },
+        "restate": {
+          "ok": true,
+          "hash": "0xebaa9893f08541311a15df8a5379edae914e2958b58c500dae1ee970baa2ad90",
+          "returned": 1,
+          "detail": "",
+          "at": "2026-11-16T20:50:47Z"
+        },
+        "contest": {
+          "ok": true,
+          "hash": "0xfddb59c4b285a3199dff24d0db92f4393f72913de96bd0efebd42929d5a689e7",
+          "returned": 1,
+          "detail": "",
+          "at": "2026-11-16T20:50:55Z"
+        }
+      },
+      "tries": [
+        {
+          "tx": "0x9d06bd8203f4158de032b6f89dfa509354550719b9a96a96353fae0a57bea004",
+          "sent_at": "2026-11-16T20:51:08Z",
+          "consensus": "decided"
+        }
+      ],
+      "thread_id": 14,
+      "label": "FAIR",
+      "turn_status": "FAIR",
+      "judge_tx": "0x9d06bd8203f4158de032b6f89dfa509354550719b9a96a96353fae0a57bea004",
+      "thread_status": "ACTIVE"
+    },
+    "H3": {
+      "steps": {
+        "open": {
+          "ok": true,
+          "hash": "0x7ca448210c14994c6c95237ee9ef7641cbf0801c5f8568681f650f0532f09824",
+          "returned": 15,
+          "detail": "",
+          "at": "2026-11-16T20:51:16Z"
+        },
+        "join": {
+          "ok": true,
+          "hash": "0x46c22ebe9f58aaba0c21444b0035bd0d76653e5919a6091075e70a74911c4153",
+          "returned": 15,
+          "detail": "",
+          "at": "2026-11-16T20:51:24Z"
+        },
+        "restate": {
+          "ok": true,
+          "hash": "0x7e6bc912d3fc16e4c868c0c38d4b92a394a9ee8247bd03ee93999d2eac7711ba",
+          "returned": 1,
+          "detail": "",
+          "at": "2026-11-16T20:51:31Z"
+        },
+        "contest": {
+          "ok": true,
+          "hash": "0x9b19cc89eaf31d8db99ab643471d75af2f5b51c68984453bfc879d1f199d01d6",
+          "returned": 1,
+          "detail": "",
+          "at": "2026-11-16T20:51:40Z"
+        }
+      },
+      "tries": [
+        {
+          "tx": "0xa41166b0eae1a29fc6a7f73b58604c7f35bc0239d3ee2737a31b1bd54b0d76a5",
+          "sent_at": "2026-11-16T20:52:04Z",
+          "consensus": "decided"
+        }
+      ],
+      "thread_id": 15,
+      "label": "INCOMPLETE",
+      "turn_status": "STATED",
+      "judge_tx": "0xa41166b0eae1a29fc6a7f73b58604c7f35bc0239d3ee2737a31b1bd54b0d76a5",
+      "thread_status": "ACTIVE"
+    }
+  },
+  "contract": "0xC7B813381315Dd77842597e68817F5d4704AbA44",
+  "contract_sha256": "2dd86828b74fe2ddc4a4aa1a93381a3a67a5cbc4e8f976eafd17363ffa38335b",
+  "golden_sha256": "5ceb3232b3cc2b0c1bd94bc6a6448fb1af9440abda2812f50cfff253d74f9470",
+  "golden_locked_at": "2026-11-16T20:39:32Z",
+  "judge_sha256": "d640f6a464f0dbd5b7008a3725ead000a6fb613ccc70a2171a300f69e34cdc6a",
+  "network": "studio-next",
+  "explorer": "https://explorer-studio-dev.genlayer.com",
+  "author": "0x48C88E50177002934542fBd0078Fa2279E7798F4",
+  "joiner": "0xEB53995FF258c1DeaECA1F38A7af6c30fD560533",
+  "stray_threads": {
+    "1": "A live smoke run of the deployed contract before the evaluation: open, join, a first try, a second try, the reply, and a withdrawal. Not part of the evaluation.",
+    "10": "Opened, joined, restated and contested by a second runner that was started by mistake while the first was still running. Its judge call was never sent (the nonce collided with the first runner's, and the script did not resend). It is not scored and stays contested on chain."
+  },
+  "notes": [
+    "While the first runner was still working, a second one was started by mistake. It sent one extra contest on thread 8 that the contract refused (there is no restatement to contest, because the first runner had already contested it), and it opened thread 10 as described above. Neither changed a scored result."
+  ]
+}

@@ -1,0 +1,30 @@
+---
+title: Introduction
+description: Restate is a debate tool where you cannot answer until you have restated the other side fairly, checked by GenLayer validators.
+---
+
+<Callout>Restate never decides who is right. It only checks that each side can say the other's position so well the author would sign it.</Callout>
+
+Most arguments go wrong before they start: each side answers a weaker version of what the other said. **Restate makes the restatement the price of replying.**
+
+## What it does
+
+1. An author opens a **thread**: a topic, a position of at most 800 characters, a **window** of 12 to 96 hours, and a **deposit** of 5 to 1000 GEN.
+2. Someone **joins** with the same deposit. They now have to restate the position.
+3. The author can **confirm** the restatement, which counts as FAIR with no validator call, or **contest** it. Contested restatements go to GenLayer **validators**, who read the restatement against the original and answer one label: `FAIR`, `INCOMPLETE` or `DISTORTED`.
+4. Only a `FAIR` restatement unlocks the **reply**. An `INCOMPLETE` or `DISTORTED` one costs a try, and a restatement gets two.
+5. The joiner posts their reply, and the author now has to restate it. When both restatements are FAIR, both deposits come back.
+
+## What the validators decide, and what they do not
+
+They decide one thing: whether a restatement says what the original says, no more and no less. They are never told which side is which, and never asked whether the original is right. The label is the only thing they agree on and the only thing stored from the model.
+
+## What is on chain
+
+Everything: the position, every restatement (including the failed tries), every label, the deposits and the clock. A failed restatement stays on the thread, next to the fair one, because readers learn from both.
+
+## Where to go next
+
+- **Starting a debate?** [Open a thread](/docs/quickstart).
+- **Joining one?** [Restate a position](/docs/restate-a-position).
+- **Reviewing it?** Read [the judge prompt, word for word](/docs/more/judge-prompt), the [evaluation results with transactions](/docs/more/evaluation), and the [limitations](/docs/more/limitations).

@@ -1,0 +1,15 @@
+{
+  "title": "Restate docs",
+  "pages": [
+    "---Getting started---",
+    "index",
+    "quickstart",
+    "restate-a-position",
+    "---Concepts---",
+    "...concepts",
+    "---Reference---",
+    "...reference",
+    "---More---",
+    "...more"
+  ]
+}

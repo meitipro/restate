@@ -1,0 +1,30 @@
+---
+title: Deposits and forfeits
+description: What each side puts in, when it comes back, and when it moves to the other side.
+---
+
+Both sides put in the same deposit, from 5 to 1000 GEN, set by the author. The contract keeps it as a balance for each address, and `withdraw` pays that balance out to the caller in one top-level transfer. Nothing is paid to a third party and nothing is sent while a thread is running.
+
+## When it comes back
+
+| Outcome | Author | Joiner |
+|---|---|---|
+| Both restatements FAIR (`DONE`) | deposit back | deposit back |
+| Nobody joined inside the window (`CLOSED`) | deposit back | none |
+
+## When it moves
+
+| Outcome | Winner | Loser |
+|---|---|---|
+| A restater runs out of tries (`FORFEITED`, reason `tries`) | the other side gets both deposits | loses their deposit |
+| A side misses a window (`FORFEITED`, reason `window`) | the other side gets both deposits | loses their deposit |
+
+A forfeit ends the thread. The winner and the loser are recorded with who called it.
+
+## What the contract never does
+
+It never takes a fee, never sends a payout from inside a validator round, and never holds a deposit for a side that is not in the thread. The money in all threads always adds up to the balances plus the deposits still inside open and active threads, and a test checks that after every sequence of moves.
+
+## The fee deposit
+
+Studio Next asks for a small fee deposit with every write, from the SDK's estimate. It is separate from the thread deposit, and most of it is refunded when the transaction finalizes.

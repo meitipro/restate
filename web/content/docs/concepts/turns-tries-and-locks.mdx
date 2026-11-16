@@ -1,0 +1,32 @@
+---
+title: Turns, tries and locks
+description: How a thread moves, why the reply box starts locked, and what a try is.
+---
+
+A thread has two turns. In each, one side restates the other's text, and only a FAIR restatement lets that side speak.
+
+| Turn | Original | Restated by | Then |
+|---|---|---|---|
+| 1 | the author's position | the joiner | a FAIR restatement unlocks the joiner's reply |
+| 2 | the joiner's reply | the author | a FAIR restatement completes the thread |
+
+## The lock
+
+Until the restatement is FAIR, the reply cannot be posted: `rebut` refuses with "the reply is locked until a restatement is FAIR". There is no override, no vote and no moderator. The only way through is to restate better, or for the author to confirm.
+
+## Tries
+
+A restatement gets **two tries**. A try is spent when the validators label a restatement `INCOMPLETE` or `DISTORTED`. After the first failure the turn goes back to waiting, the failed text is kept on the page with its label, and the restater gets a fresh window for the second try. The second failure forfeits the deposit.
+
+A try is never spent by an answer nobody read. If the model cannot be read, or the validators cannot agree, the round fails, nothing is recorded, and the restatement stays waiting for another `judge`.
+
+## The clock
+
+Every step has the thread's window, from 12 to 96 hours, chosen when the thread is opened:
+
+- the joiner has one window to join;
+- after joining, and after every failed try, the restater has one window to post;
+- after a FAIR restatement, the restater has one window to post the reply;
+- after a restatement is posted, the author has one window to confirm or contest, and silence counts as contesting.
+
+When the clock runs out, `claim_forfeit` and `judge` are open to anyone, on purpose, so a side that walked away cannot hold the thread. The caller is recorded.

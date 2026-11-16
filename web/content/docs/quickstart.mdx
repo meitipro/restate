@@ -1,0 +1,156 @@
+---
+title: 'Quickstart: open a thread'
+description: Open a thread with a position and a deposit, and see it through to a fair exchange.
+---
+
+<Callout type="warn">A thread is public text on chain. Write nothing in a position that you would not post.</Callout>
+
+## 1. Open a thread
+
+<Tabs items={['On the site', 'From code']}>
+  <Tab value="On the site">
+    <Steps>
+      <Step>
+        Open [Open a thread](/new) and connect a wallet. The site walks you through **Connect wallet**, **Switch network** (it adds chain 61997 if your wallet lacks it) and **Get test GEN**.
+      </Step>
+      <Step>
+        Write a topic of at most 80 characters and your position of at most 800. State it as you mean it, with its main points: those are what the other side has to carry.
+      </Step>
+      <Step>
+        Choose the window (12 to 96 hours, for each step) and the deposit (5 to 1000 GEN). The other side will put in the same amount.
+      </Step>
+      <Step>
+        Press **Open the thread**. The thread page is the link you share.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab value="From code">
+    The call is `open_thread(topic, position, window_hours)`, with the deposit as the value sent. This script is the one that runs: with `--dry` it prints the call and the fee deposit the SDK estimates, and sends nothing.
+
+{/* include: examples/open-thread.mjs */}
+```js title="examples/open-thread.mjs"
+/**
+ * Open a thread from a script, signing with a local test account.
+ *
+ *   node examples/open-thread.mjs <account name> <thread.json> [--dry]
+ *
+ * thread.json holds { "topic", "position", "window_h", "deposit_gen" }, the shape of examples/thread.json.
+ * With --dry nothing is sent: it prints the call and the fee deposit the SDK estimates for it.
+ * The site's own signing code (lib/genlayer-core.mjs) does the work, through a stand-in EIP-1193 wallet.
+ */
+import fs from 'node:fs';
+
+import { parseEther } from 'viem';
+
+import { CONTRACT, feesFor, outcomeOf, submit, waitDecided, walletClient } from '../lib/genlayer-core.mjs';
+import { ensureAccount, standinWallet } from '../scripts/standin-wallet.mjs';
+
+const [name, file, ...flags] = process.argv.slice(2);
+if (!name || !file) {
+  console.error('usage: node examples/open-thread.mjs <account name> <thread.json> [--dry]');
+  process.exit(2);
+}
+const thread = JSON.parse(fs.readFileSync(file, 'utf8'));
+ensureAccount(name);
+const { address, provider } = standinWallet(name);
+const client = walletClient(address, provider);
+const args = [thread.topic, thread.position, thread.window_h];
+const value = parseEther(thread.deposit_gen);
+
+if (flags.includes('--dry')) {
+  const fees = await feesFor(client, 'open_thread', address);
+  console.log(JSON.stringify({ contract: CONTRACT, method: 'open_thread', from: address, window_h: thread.window_h, deposit_gen: thread.deposit_gen, feeValue: String(fees.feeValue) }));
+  await new Promise((r) => setTimeout(r, 200));
+  process.exit(0);
+}
+const hash = await submit(client, { method: 'open_thread', args, value, sender: address });
+const outcome = outcomeOf(await waitDecided(client, hash, 'open_thread'));
+console.log(JSON.stringify({ hash, ok: outcome.ok, thread_id: outcome.returned ?? null, refusal: outcome.refusal || null }));
+process.exit(outcome.ok ? 0 : 1);
+```
+{/* end include */}
+
+    It reads the shape below.
+
+{/* include: examples/thread.json */}
+```json title="examples/thread.json"
+{
+  "topic": "Should contributors be paid in stablecoins?",
+  "position": "Quarterly stablecoin pay beats token pay for contributors. Token pay ties wages to the price and hides what the work really costs, and stable pay makes budgets simple. Alignment can come from a separate vesting grant.",
+  "window_h": 48,
+  "deposit_gen": "10"
+}
+```
+{/* end include */}
+  </Tab>
+</Tabs>
+
+## 2. Wait for someone to join
+
+Joining costs the same deposit and has to happen inside the window. If nobody does, anyone may call `claim_forfeit`: the thread closes and your deposit goes back to your balance, where `withdraw` pays it out.
+
+## 3. Answer the restatement
+
+When the joiner restates you, the thread page asks you to **confirm** or **contest**. Confirming says "yes, that is what I mean", and counts as FAIR with no validator call. Contesting sends it to the validators, and anyone can start that with `judge(thread_id)`. If you say nothing until the window ends, that counts as contesting.
+
+## 4. Read the thread back
+
+Everything you see on the site is one read, `get_thread`:
+
+{/* include: examples/read-thread.mjs */}
+```js title="examples/read-thread.mjs"
+/**
+ * Read a thread, no wallet and nothing signed.
+ *
+ *   node examples/read-thread.mjs <thread id>
+ *
+ * get_thread answers JSON text: the position, every turn with its tries and labels, the deposits and the clock.
+ */
+import { CONTRACT, readClient, retried } from '../lib/genlayer-core.mjs';
+
+const [id] = process.argv.slice(2);
+if (!id) {
+  console.error('usage: node examples/read-thread.mjs <thread id>');
+  process.exit(2);
+}
+const client = readClient();
+const raw = await retried(() => client.readContract({ address: CONTRACT, functionName: 'get_thread', args: [Number(id)] }));
+const thread = JSON.parse(String(raw));
+console.log(
+  JSON.stringify({
+    found: thread.found,
+    status: thread.status,
+    phase: thread.phase,
+    turn: thread.turn,
+    labels: (thread.turns ?? []).map((t) => ({ turn: t.n, status: t.status, label: t.label, tries_left: t.tries_left })),
+  }),
+);
+```
+{/* end include */}
+
+Or from Python:
+
+{/* include: examples/read_thread.py */}
+```python title="examples/read_thread.py"
+"""
+Read a thread from Python with genlayer-py 0.19.0rc2.
+
+    python web/examples/read_thread.py <thread id>
+
+Reads need an account even for views, so a throwaway one is made and never funded.
+"""
+import json
+import sys
+
+from genlayer_py import create_account, create_client
+from genlayer_py.chains import studio_devnet
+
+CONTRACT = json.load(open("web/lib/deployment.json"))["restate"]
+studio_devnet.rpc_urls = {"default": {"http": ["https://studio-next.genlayer.com/api"]}}
+
+client = create_client(chain=studio_devnet, account=create_account())
+thread = json.loads(client.read_contract(address=CONTRACT, function_name="get_thread", args=[int(sys.argv[1])]))
+labels = [{"turn": t["n"], "status": t["status"], "label": t["label"], "tries_left": t["tries_left"]} for t in thread.get("turns", [])]
+print(json.dumps({"found": thread["found"], "status": thread.get("status"), "phase": thread.get("phase"), "turn": thread.get("turn"), "labels": labels}))
+```
+{/* end include */}

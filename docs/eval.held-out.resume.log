@@ -1,0 +1,51 @@
+  open_thread 0x4c2ac4e48934453f30e0a64fae6f02d26e95307a07e19f6af47dd25ab71cb4c2
+  join 0x779cd048cefcbb5e2ac059d1dda940cf085dddcf918219e970b86980e03690be
+  restate 0x790fce9ed09aad455d7e5259a432d9580324dd1345e45e6e76f5e7917ab7e9c9
+  contest 0x1755827def0e225fdbcab56700d7bc8f4f8ebb45af1749951922078c6f6c13c8
+Traceback (most recent call last):
+  File "D:\restate\.venv\Lib\site-packages\genlayer_py\contracts\actions.py", line 1309, in _send_transaction
+    tx_hash = self.provider.make_request(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\restate\.venv\Lib\site-packages\genlayer_py\provider\provider.py", line 48, in make_request
+    self._raise_on_error(resp, method)
+  File "D:\restate\.venv\Lib\site-packages\genlayer_py\provider\provider.py", line 54, in _raise_on_error
+    raise GenLayerError(
+genlayer_py.exceptions.GenLayerError: eth_sendRawTransaction failed (code=-32602): NonceTooLow(expected=26,actual=25)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\restate\scripts\chain.py", line 338, in _guarded
+    return attempt()
+           ^^^^^^^^^
+  File "D:\restate\scripts\chain.py", line 330, in <lambda>
+    return _hash(self._guarded("write " + method, lambda: self.client.write_contract(**call)))
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\restate\.venv\Lib\site-packages\genlayer_py\client\genlayer_client.py", line 176, in write_contract
+    return write_contract(
+           ^^^^^^^^^^^^^^^
+  File "D:\restate\.venv\Lib\site-packages\genlayer_py\contracts\actions.py", line 170, in write_contract
+    return _send_transaction(
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\restate\.venv\Lib\site-packages\genlayer_py\contracts\actions.py", line 1313, in _send_transaction
+    raise GenLayerError(f"Transaction failed: {_format_rpc_error(exc)}") from exc
+genlayer_py.exceptions.GenLayerError: Transaction failed: eth_sendRawTransaction failed (code=-32602): NonceTooLow(expected=26,actual=25)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\restate\eval\run_golden.py", line 248, in <module>
+    run([a for a in sys.argv[1:] if not a.startswith("--")])
+  File "D:\restate\eval\run_golden.py", line 147, in run
+    outcome = joiner.send(address, "judge", [tid])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\restate\scripts\chain.py", line 378, in send
+    tx = self.write(address, method, args, value)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\restate\scripts\chain.py", line 330, in write
+    return _hash(self._guarded("write " + method, lambda: self.client.write_contract(**call)))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\restate\scripts\chain.py", line 348, in _guarded
+    raise RuntimeError(f"{what}: the node took nonce {before} and the answer was lost. Not resending.") from error
+RuntimeError: write judge: the node took nonce 25 and the answer was lost. Not resending.
+held exit 1

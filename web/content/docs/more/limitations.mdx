@@ -1,0 +1,20 @@
+---
+title: Limitations
+description: What Restate does not do, said plainly.
+---
+
+- **It checks a restatement, not a debate.** A FAIR restatement shows that one side understood the other. It says nothing about who is right, and it cannot stop either side from replying in bad faith once the reply is unlocked.
+- **The judge is a model.** Validators agree on a label, not on the truth. The golden evaluation shows how often the label matched what the authors of the cases expected, and where it did not, the miss is reported as it came out.
+- **The reasons are not stored.** The validators agree on one label and nothing else, so a failed try carries a label but no explanation. The site's point-by-point reading aid is a word-overlap guess made in the browser, and it is never part of the record.
+- **Two tries.** A side that misreads the other twice loses its deposit, even in good faith. That is the price of making the lock real. The author can always confirm a restatement that is close enough.
+- **Public text.** Positions, restatements and labels are public on chain. Do not use it for anything you could not post.
+- **Two turns only.** One exchange, then the thread is done. Longer debates are several threads.
+- **The author's silence counts as contesting.** A restatement is never accepted by default, so an absent author costs the joiner a validator round, not a forfeit.
+- **A test network.** The contract runs on GenLayer Studio Next, with test GEN that has no value. Studio Next can be reset, and when it is, threads on it go with it.
+- **No removal and no ban.** There is only a locked reply box and the deposits. Nothing here moderates content.
+
+## Where the build spec contradicts itself
+
+- **Tries.** The spec says a restatement gets two tries and also that the third failure forfeits. This contract takes the first reading: two tries, and the second failure forfeits.
+- **Unjoined threads.** None of the ten methods closes a thread nobody joined. `claim_forfeit` does it after the window, and the author's deposit goes back to their balance.
+- **The point list.** The spec's reading aid beside a verdict is never compared and never stored, so the contract does not produce it. The site shows a word-overlap guess made in the browser, labelled as a guess.

@@ -1,0 +1,399 @@
+{
+  "network": "studio-next",
+  "contract": "0xC7B813381315Dd77842597e68817F5d4704AbA44",
+  "steps": [
+    {
+      "key": "pay:open",
+      "method": "open_thread",
+      "from": "0xd2c4385aCdC75c403421ae4cd3453385c766f9F5",
+      "ok": true,
+      "hash": "0xfd5cefe10f378d403994969c8095b55248c19871b8893f1d1330d397a7bbad5f",
+      "returned": 16,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-16T20:52:37Z",
+      "note": ""
+    },
+    {
+      "key": "pay:join",
+      "method": "join",
+      "from": "0x7d23cD5246Ee7f9DB1AB7D99714Fcf8ed76e42b8",
+      "ok": true,
+      "hash": "0x0ada6b6ecd30ad774a1f2465fc28f5bc769678e820df4ba31a21b8517bf1b0aa",
+      "returned": 16,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-16T20:52:44Z",
+      "note": ""
+    },
+    {
+      "key": "pay:try1",
+      "method": "restate",
+      "from": "0x7d23cD5246Ee7f9DB1AB7D99714Fcf8ed76e42b8",
+      "ok": true,
+      "hash": "0x15468baaff7c6d6b136314db7500978d0925fe90975a987cfba06b0a6e945b33",
+      "returned": 1,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-16T20:52:53Z",
+      "note": "a strawman"
+    },
+    {
+      "key": "pay:contest1",
+      "method": "contest",
+      "from": "0xd2c4385aCdC75c403421ae4cd3453385c766f9F5",
+      "ok": true,
+      "hash": "0x8069094aa189da877683ab18a1b642aac6c351ace91df429556691e2c2db93c1",
+      "returned": 1,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-16T20:53:00Z",
+      "note": "the author does not recognise it"
+    },
+    {
+      "key": "pay:judge1",
+      "method": "judge",
+      "from": "0x7d23cD5246Ee7f9DB1AB7D99714Fcf8ed76e42b8",
+      "ok": true,
+      "hash": "0x726bcaa508979571626bc072b0df580e8cd8b393d46fcd0bf20419a160021914",
+      "returned": 1,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-16T20:53:14Z",
+      "note": "validators read the strawman"
+    },
+    {
+      "key": "pay:try2",
+      "method": "restate",
+      "from": "0x7d23cD5246Ee7f9DB1AB7D99714Fcf8ed76e42b8",
+      "ok": true,
+      "hash": "0x1431508612bda5b62d1f47a8e1a9211d32ec903b9c900e0fbfaedf9d8b95fa99",
+      "returned": 2,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-16T20:53:23Z",
+      "note": "a fair restatement"
+    },
+    {
+      "key": "pay:contest2",
+      "method": "contest",
+      "from": "0xd2c4385aCdC75c403421ae4cd3453385c766f9F5",
+      "ok": true,
+      "hash": "0x36832b907d0a84439e55ec1e820276e851718f31936baa399f261e2d50a3450f",
+      "returned": 1,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-16T20:53:31Z",
+      "note": ""
+    },
+    {
+      "key": "pay:judge2",
+      "method": "judge",
+      "from": "0x7d23cD5246Ee7f9DB1AB7D99714Fcf8ed76e42b8",
+      "ok": true,
+      "hash": "0xae75eeab018349ff0fc8ece640edd9744a51059f974e518931fe8b39c7e29a3c",
+      "returned": 1,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-16T20:53:56Z",
+      "note": ""
+    },
+    {
+      "key": "pay:reply",
+      "method": "rebut",
+      "from": "0x7d23cD5246Ee7f9DB1AB7D99714Fcf8ed76e42b8",
+      "ok": true,
+      "hash": "0xba0fc80d1f1b2e885633a53777a9220d9c862e3538a03db9d3a23fe6ddaf1ef4",
+      "returned": 2,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-16T20:54:05Z",
+      "note": "the reply the lock was holding"
+    },
+    {
+      "key": "pay:restate_reply",
+      "method": "restate",
+      "from": "0xd2c4385aCdC75c403421ae4cd3453385c766f9F5",
+      "ok": true,
+      "hash": "0xcf0007eab9191f31faacee8eb4763cda10c9261775c154cfd964cfeba3fe48ce",
+      "returned": 1,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-16T20:54:13Z",
+      "note": "the author must restate the reply"
+    },
+    {
+      "key": "pay:confirm_reply",
+      "method": "confirm",
+      "from": "0x7d23cD5246Ee7f9DB1AB7D99714Fcf8ed76e42b8",
+      "ok": true,
+      "hash": "0x6e53778e3d5b4db94906f6eeccb04a73d0469bcd17f32c5e0102da2354569648",
+      "returned": 2,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-16T20:54:21Z",
+      "note": "the replier confirms: FAIR with no validator call"
+    },
+    {
+      "key": "pay:withdraw_ana",
+      "method": "withdraw",
+      "from": "0xd2c4385aCdC75c403421ae4cd3453385c766f9F5",
+      "ok": true,
+      "hash": "0x44ee357db4e41dffe4873f164b8b501d32fced4135ddef9e627f503c328e372e",
+      "returned": 5000000000000000000,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-16T20:54:31Z",
+      "note": "a completed thread returns both deposits"
+    },
+    {
+      "key": "pay:withdraw_ben",
+      "method": "withdraw",
+      "from": "0x7d23cD5246Ee7f9DB1AB7D99714Fcf8ed76e42b8",
+      "ok": true,
+      "hash": "0xe386270f3baf1d55b61c1f231bbaf0c14be6e2fe31bab7818be88163d078af73",
+      "returned": 5000000000000000000,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-16T20:54:39Z",
+      "note": "a completed thread returns both deposits"
+    },
+    {
+      "key": "review:open",
+      "method": "open_thread",
+      "from": "0x7d23cD5246Ee7f9DB1AB7D99714Fcf8ed76e42b8",
+      "ok": true,
+      "hash": "0xf42f7bc6033000e426d87b443643883c9c0d07371a031181514437ccb3360dda",
+      "returned": 17,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-16T20:54:48Z",
+      "note": ""
+    },
+    {
+      "key": "review:join",
+      "method": "join",
+      "from": "0x8FfaC4E66C6194917b57F2970BD00F9a97509137",
+      "ok": true,
+      "hash": "0x21130de12b0daedbeacd0fb6a7cf247b232281f69b20e790bac9d1278bcb9e73",
+      "returned": 17,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-16T20:54:56Z",
+      "note": ""
+    },
+    {
+      "key": "review:try1",
+      "method": "restate",
+      "from": "0x8FfaC4E66C6194917b57F2970BD00F9a97509137",
+      "ok": true,
+      "hash": "0x1218cda601e5b755110a3d1f8bba05016aba1624fe1cd317871af241f317010a",
+      "returned": 1,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-16T20:55:04Z",
+      "note": ""
+    },
+    {
+      "key": "review:confirm1",
+      "method": "confirm",
+      "from": "0x7d23cD5246Ee7f9DB1AB7D99714Fcf8ed76e42b8",
+      "ok": true,
+      "hash": "0xc02cb2dc0a65c44c273de1ae1314ea32a77ca067a1af168acfce63608040b2a1",
+      "returned": 1,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-16T20:55:12Z",
+      "note": "the author confirms: FAIR with no validator call"
+    },
+    {
+      "key": "offsite:open",
+      "method": "open_thread",
+      "from": "0x8FfaC4E66C6194917b57F2970BD00F9a97509137",
+      "ok": true,
+      "hash": "0x70d5d492d9aae011e2e3e2b5f56d4562b5b99d8581476c138e68bb4ed2a986fe",
+      "returned": 18,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-16T20:55:21Z",
+      "note": ""
+    },
+    {
+      "key": "retreat:open",
+      "method": "open_thread",
+      "from": "0xf20FAcc434c8F809D7189C6210189a603E90Cd64",
+      "ok": true,
+      "hash": "0x1ccae1ac1149c0d7b6123f2010f88ce36be1fda6b2651a9388a16307544ec44f",
+      "returned": 19,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-16T20:55:36Z",
+      "note": ""
+    },
+    {
+      "key": "retreat:join",
+      "method": "join",
+      "from": "0xd2c4385aCdC75c403421ae4cd3453385c766f9F5",
+      "ok": true,
+      "hash": "0x9249cd6d3c178aebe82d187f718f2a59af94cac547ad4182d09f71c388b9139c",
+      "returned": 19,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-16T20:55:44Z",
+      "note": ""
+    },
+    {
+      "key": "retreat:try1",
+      "method": "restate",
+      "from": "0xd2c4385aCdC75c403421ae4cd3453385c766f9F5",
+      "ok": true,
+      "hash": "0x0e3366eabb7f30defdc9f60b088dcadf8af8c083f74acb5b42a1c7c9240a424f",
+      "returned": 1,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-16T20:55:53Z",
+      "note": "a restatement that argues instead of restating"
+    },
+    {
+      "key": "retreat:contest1",
+      "method": "contest",
+      "from": "0xf20FAcc434c8F809D7189C6210189a603E90Cd64",
+      "ok": true,
+      "hash": "0xffa9f8c13b680148bbafbc1e8ea6987f413dd347886e33626450f7a10311875a",
+      "returned": 1,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-16T20:56:01Z",
+      "note": ""
+    },
+    {
+      "key": "retreat:judge1",
+      "method": "judge",
+      "from": "0xd2c4385aCdC75c403421ae4cd3453385c766f9F5",
+      "ok": true,
+      "hash": "0x82e63044b072ff3e06c614230c185fbcaf545f4feb44994bb0d649ed4bc70d1b",
+      "returned": 1,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-16T20:56:15Z",
+      "note": ""
+    },
+    {
+      "key": "retreat:try2",
+      "method": "restate",
+      "from": "0xd2c4385aCdC75c403421ae4cd3453385c766f9F5",
+      "ok": true,
+      "hash": "0x4947de9d3465f8216680da9df8277deb20347cf61b7b9e096600fbe7a753a55a",
+      "returned": 2,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-16T20:56:25Z",
+      "note": "a restatement that argues instead of restating"
+    },
+    {
+      "key": "retreat:contest2",
+      "method": "contest",
+      "from": "0xf20FAcc434c8F809D7189C6210189a603E90Cd64",
+      "ok": true,
+      "hash": "0x5a11fb3de3fa2fca2bec26d36e340a98499f86c1b701fec34fa96c0f57f7cf3f",
+      "returned": 1,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-16T20:56:33Z",
+      "note": ""
+    },
+    {
+      "key": "retreat:judge2",
+      "method": "judge",
+      "from": "0xd2c4385aCdC75c403421ae4cd3453385c766f9F5",
+      "ok": true,
+      "hash": "0xc7d59ac603699a351b4cba42ede832b1d3502be5c3e2cd9c045f239ae3a30f0d",
+      "returned": 1,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-16T20:56:52Z",
+      "note": ""
+    },
+    {
+      "key": "retreat:withdraw_dee",
+      "method": "withdraw",
+      "from": "0xf20FAcc434c8F809D7189C6210189a603E90Cd64",
+      "ok": true,
+      "hash": "0xeb03244deb96459493d0216454ef959f5065afef9cedb0751015c237096bbb16",
+      "returned": 10000000000000000000,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-16T20:57:02Z",
+      "note": "the winner takes both deposits"
+    }
+  ],
+  "threads": {
+    "pay": {
+      "id": 16,
+      "topic": "Pay contributors in stablecoins?",
+      "status": "DONE",
+      "phase": "",
+      "turn": 2,
+      "reason": "",
+      "turns": [
+        {
+          "n": 1,
+          "status": "FAIR",
+          "label": "FAIR",
+          "failures": 1,
+          "tries_left": 0
+        },
+        {
+          "n": 2,
+          "status": "FAIR",
+          "label": "FAIR",
+          "failures": 0,
+          "tries_left": 0
+        }
+      ]
+    },
+    "review": {
+      "id": 17,
+      "topic": "Seven day review before every vote?",
+      "status": "ACTIVE",
+      "phase": "REPLY",
+      "turn": 1,
+      "reason": "",
+      "turns": [
+        {
+          "n": 1,
+          "status": "FAIR",
+          "label": "FAIR",
+          "failures": 0,
+          "tries_left": 0
+        }
+      ]
+    },
+    "offsite": {
+      "id": 18,
+      "topic": "Meet in person twice a year?",
+      "status": "OPEN",
+      "phase": "",
+      "turn": 0,
+      "reason": "",
+      "turns": []
+    },
+    "retreat": {
+      "id": 19,
+      "topic": "Is the in-person retreat worth it?",
+      "status": "FORFEITED",
+      "phase": "",
+      "turn": 1,
+      "reason": "tries",
+      "turns": [
+        {
+          "n": 1,
+          "status": "FORFEIT",
+          "label": "DISTORTED",
+          "failures": 2,
+          "tries_left": 0
+        }
+      ]
+    }
+  }
+}

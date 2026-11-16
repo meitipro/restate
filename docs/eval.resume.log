@@ -1,0 +1,9 @@
+1: already labelled, never sent again
+2: already labelled, never sent again
+3: already labelled, never sent again
+4: already labelled, never sent again
+5: already labelled, never sent again
+6: already labelled, never sent again
+  contest 0x26f5cc0e4163fc8cc9defdcee21342349d3b05b15d5cbc4e396019a1e3d21f81
+contest for case 7 failed: status=ACCEPTED execution=FINISHED_WITH_ERROR [EXPECTED] there is no restatement to contest
+golden exit 1

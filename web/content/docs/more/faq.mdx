@@ -1,0 +1,28 @@
+---
+title: FAQ and changelog
+description: Common questions, and what changed.
+---
+
+## FAQ
+
+**Who decides who is right?** Nobody, and Restate never tries. Validators are never told which side is which and never asked whether the original is right.
+
+**Is it a vote?** No. Each validator reads the same two texts and answers one label. A label stands only when they agree on it.
+
+**Can I be silent?** Not usefully. An author who does not answer inside the window counts as contesting. A joiner who does not restate, or a replier who does not reply, forfeits their deposit to the other side.
+
+**What if I disagree with the label?** A restatement gets two tries, and the failed one stays on the page. The author can also confirm a restatement, which counts as FAIR without a validator call.
+
+**Why can anyone call `judge` and `claim_forfeit`?** So a thread does not wait for a side that walked away. The result is a function of what is already on chain, and the caller is recorded.
+
+**Does it ban or remove anyone?** No. There is only a locked reply box and the deposits.
+
+**What does it cost?** The deposit, which comes back when the thread is fair, plus Studio Next's small fee deposit on every write, most of which is refunded.
+
+**Which network?** GenLayer Studio Next, chain 61997. Test GEN is free from the site's faucet.
+
+## Changelog
+
+**v1, November 2026.** The first deployment on Studio Next: ten methods, the judge prompt from the build spec word for word, label-only agreement, balances with a single top-level `withdraw`. The deployed address and source hash are on the [addresses page](/docs/reference/addresses).
+
+The runtime header is `py-genlayer:kzybg95x…`, the GenVM v0.4 runner. The older v0.3 headers (`babwp9t3…` and `5jycge4q…`) were rejected by the live network on the day this was deployed (`invalid_contract runner malformed`). Payouts use `gl.chain.Account(address).emit_transfer(value)`, the v0.4 form.
