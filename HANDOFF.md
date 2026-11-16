@@ -2,6 +2,8 @@
 
 ## Needs you
 
+- **Make the repository public** so the portal link opens: `gh repo edit meitipro/restate --visibility public --accept-visibility-change-consequences`.
+
 - **Send the portal entry.** `submission/portal.md` and `submission/form-fields.json`, with the logo at `submission/restate-icon-512.png`.
 
 ## Already done

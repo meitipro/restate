@@ -5,3 +5,22 @@ open-thread: open_thread ok in 12 s  0xd9a53c1dd4c6a9246ca3353f706348ca94097757e
 join: join ok in 7 s  0x7854f4908f2121c3ff33f3ddd20054a449749773ca2b7c45a05ef3942561b262
 restate1: restate ok in 8 s  0xb3e48dc508468f99c74a06991981c72d02e6d0fb9b3a5764e6684a6d9d6e0379
 contest1: contest ok in 7 s  0x69c880863111aee6c30096457aef594972f8e6ce52c112e86b10f050e59fa212
+judge1: judge ok in 12 s  0xfb533061f1b34fa3498fe53faa52f95cafe62ba98535c58802c1f8c13643af5b
+  -> try 1: turn STATED, last label DISTORTED, thread ACTIVE/RESTATE
+restate2: restate ok in 7 s  0x0cb5ba366b755ecf11c8fc4112cca4019725723b25fe29ce8bd4096568557ec8
+contest2: contest ok in 13 s  0x406ebcf4b3fca41af14b37e93420ab8ed4ed8dd1c0979065d3f1f3cdcba3e5b5
+judge2: judge ok in 12 s  0xca1d97b85c17b2a0089698e4c0b828b051561faf46e958a78bb8102176de76b0
+  -> try 2: turn FAIR, last label FAIR, thread ACTIVE/REPLY
+reply: rebut ok in 13 s  0x1f90e11c5f6f14eebdbe48086489186e322a2175c56692173623c0113801eef7
+restate-reply: restate ok in 13 s  0x8c77c2006d03da3bf1a83b65b5ed23869b0b0bf9558d3c66edb9cdb7ab581362
+confirm-reply: confirm ok in 8 s  0x8cefcfda33dfd6a0c3700fcc14e8fc6b3a768bc8630bb33a2c241fc93a6908e4
+  -> thread DONE
+author-withdraw: withdraw ok in 7 s  0xe84e4efdca18dd801ecb59160524c91e39d347eae613fe6ed0a096ae8c4f841d
+  author: 14.949764108249974 GEN -> 14.999559171499985 GEN; owed 5 GEN, fee 0.000151306000002823 GEN; difference -4950053630749985882 wei
+joiner-withdraw: withdraw ok in 7 s  0x39f345bfe6835fbbc8b3c16a1acfd0276ffbb8920cefbb855b251d0004b5905f
+  joiner: 14.99944944699998 GEN -> 19.999323141249977 GEN; owed 5 GEN, fee 0.000151305750002823 GEN; difference 25000000000000 wei
+page-thread: HTTP 200 shows it  https://restate-genlayer.vercel.app/t/20
+page-turn: HTTP 200 shows it  https://restate-genlayer.vercel.app/t/20/turn/1
+
+recorded in docs/reviewer-path.studio-next.json (run rp1)
+exit 0

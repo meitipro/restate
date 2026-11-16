@@ -45,14 +45,14 @@ async function settled(hash) {
   throw new Error(`${hash} did not settle`);
 }
 
-const writes = log.steps.filter((s) => s.hash && s.ok);
+const writes = log.steps.filter((s) => s.hash && s.ok && s.from);
 const faucet = Object.fromEntries(log.steps.filter((s) => s.key.startsWith('faucet-') && s.ok).map((s) => [s.key.slice(7), BigInt(s.after) - BigInt(s.before)]));
 const payouts = {
-  passer: log.steps.find((s) => s.key === 'balance-applicant')?.owed,
-  owner: log.steps.find((s) => s.key === 'balance-owner')?.owed,
+  author: log.steps.find((s) => s.key === 'balance-author')?.owed,
+  joiner: log.steps.find((s) => s.key === 'balance-joiner')?.owed,
 };
 const out = {};
-for (const [who, address] of Object.entries({ owner: log.accounts.owner, passer: log.accounts.passer, failer: log.accounts.failer })) {
+for (const [who, address] of Object.entries({ author: log.accounts.author, joiner: log.accounts.joiner })) {
   const mine = writes.filter((s) => s.from.toLowerCase() === address.toLowerCase());
   let fees = 0n;
   let messages = 0n;

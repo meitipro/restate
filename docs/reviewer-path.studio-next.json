@@ -101,6 +101,252 @@
           "returned": 1,
           "refusal": null,
           "seconds_to_decision": 7
+        },
+        {
+          "at": "2026-11-16T21:04:37.931Z",
+          "key": "judge1",
+          "method": "judge",
+          "account": "review_joiner_rp1",
+          "from": "0x97Cd5c79DeAA859194d2044c02A7A10759Fd83F7",
+          "args": [
+            20
+          ],
+          "value": "0",
+          "hash": "0xfb533061f1b34fa3498fe53faa52f95cafe62ba98535c58802c1f8c13643af5b",
+          "ok": true,
+          "status": "ACCEPTED",
+          "execution": "SUCCESS",
+          "returned": 1,
+          "refusal": null,
+          "seconds_to_decision": 12
+        },
+        {
+          "at": "2026-11-16T21:04:38.772Z",
+          "key": "label1",
+          "ok": true,
+          "why": "a strawman: expected to cost a try and keep the reply locked",
+          "thread_id": 20,
+          "thread_status": "ACTIVE",
+          "phase": "RESTATE",
+          "turn_status": "STATED",
+          "label": "DISTORTED",
+          "history": [
+            "DISTORTED"
+          ]
+        },
+        {
+          "at": "2026-11-16T21:04:45.682Z",
+          "key": "restate2",
+          "method": "restate",
+          "account": "review_joiner_rp1",
+          "from": "0x97Cd5c79DeAA859194d2044c02A7A10759Fd83F7",
+          "args": [
+            20,
+            "They argue for paying contributors quarterly in stablecoi..."
+          ],
+          "value": "0",
+          "hash": "0x0cb5ba366b755ecf11c8fc4112cca4019725723b25fe29ce8bd4096568557ec8",
+          "ok": true,
+          "status": "ACCEPTED",
+          "execution": "SUCCESS",
+          "returned": 2,
+          "refusal": null,
+          "seconds_to_decision": 7
+        },
+        {
+          "at": "2026-11-16T21:04:58.396Z",
+          "key": "contest2",
+          "method": "contest",
+          "account": "review_author_rp1",
+          "from": "0x128a32aEC091119d3A26fB39C34f3Abe859781E4",
+          "args": [
+            20
+          ],
+          "value": "0",
+          "hash": "0x406ebcf4b3fca41af14b37e93420ab8ed4ed8dd1c0979065d3f1f3cdcba3e5b5",
+          "ok": true,
+          "status": "ACCEPTED",
+          "execution": "SUCCESS",
+          "returned": 1,
+          "refusal": null,
+          "seconds_to_decision": 13
+        },
+        {
+          "at": "2026-11-16T21:05:10.106Z",
+          "key": "judge2",
+          "method": "judge",
+          "account": "review_joiner_rp1",
+          "from": "0x97Cd5c79DeAA859194d2044c02A7A10759Fd83F7",
+          "args": [
+            20
+          ],
+          "value": "0",
+          "hash": "0xca1d97b85c17b2a0089698e4c0b828b051561faf46e958a78bb8102176de76b0",
+          "ok": true,
+          "status": "ACCEPTED",
+          "execution": "SUCCESS",
+          "returned": 1,
+          "refusal": null,
+          "seconds_to_decision": 12
+        },
+        {
+          "at": "2026-11-16T21:05:10.887Z",
+          "key": "label2",
+          "ok": true,
+          "why": "a full restatement",
+          "thread_id": 20,
+          "thread_status": "ACTIVE",
+          "phase": "REPLY",
+          "turn_status": "FAIR",
+          "label": "FAIR",
+          "history": [
+            "DISTORTED"
+          ]
+        },
+        {
+          "at": "2026-11-16T21:05:23.423Z",
+          "key": "reply",
+          "method": "rebut",
+          "account": "review_joiner_rp1",
+          "from": "0x97Cd5c79DeAA859194d2044c02A7A10759Fd83F7",
+          "args": [
+            20,
+            "A vesting grant only aligns people who stay long enough t..."
+          ],
+          "value": "0",
+          "hash": "0x1f90e11c5f6f14eebdbe48086489186e322a2175c56692173623c0113801eef7",
+          "ok": true,
+          "status": "ACCEPTED",
+          "execution": "SUCCESS",
+          "returned": 2,
+          "refusal": null,
+          "seconds_to_decision": 13
+        },
+        {
+          "at": "2026-11-16T21:05:36.867Z",
+          "key": "restate-reply",
+          "method": "restate",
+          "account": "review_author_rp1",
+          "from": "0x128a32aEC091119d3A26fB39C34f3Abe859781E4",
+          "args": [
+            20,
+            "They say a vesting grant only aligns people who stay long..."
+          ],
+          "value": "0",
+          "hash": "0x8c77c2006d03da3bf1a83b65b5ed23869b0b0bf9558d3c66edb9cdb7ab581362",
+          "ok": true,
+          "status": "ACCEPTED",
+          "execution": "SUCCESS",
+          "returned": 1,
+          "refusal": null,
+          "seconds_to_decision": 13
+        },
+        {
+          "at": "2026-11-16T21:05:44.896Z",
+          "key": "confirm-reply",
+          "method": "confirm",
+          "account": "review_joiner_rp1",
+          "from": "0x97Cd5c79DeAA859194d2044c02A7A10759Fd83F7",
+          "args": [
+            20
+          ],
+          "value": "0",
+          "hash": "0x8cefcfda33dfd6a0c3700fcc14e8fc6b3a768bc8630bb33a2c241fc93a6908e4",
+          "ok": true,
+          "status": "ACCEPTED",
+          "execution": "SUCCESS",
+          "returned": 2,
+          "refusal": null,
+          "seconds_to_decision": 8
+        },
+        {
+          "at": "2026-11-16T21:05:46.076Z",
+          "key": "thread-end",
+          "ok": true,
+          "thread_id": 20,
+          "thread_status": "DONE",
+          "turns": [
+            {
+              "n": 1,
+              "status": "FAIR",
+              "label": "FAIR"
+            },
+            {
+              "n": 2,
+              "status": "FAIR",
+              "label": "FAIR"
+            }
+          ]
+        },
+        {
+          "at": "2026-11-16T21:06:23.946Z",
+          "key": "author-withdraw",
+          "method": "withdraw",
+          "account": "review_author_rp1",
+          "from": "0x128a32aEC091119d3A26fB39C34f3Abe859781E4",
+          "args": [],
+          "value": "0",
+          "hash": "0xe84e4efdca18dd801ecb59160524c91e39d347eae613fe6ed0a096ae8c4f841d",
+          "ok": true,
+          "status": "ACCEPTED",
+          "execution": "SUCCESS",
+          "returned": 5000000000000000000,
+          "refusal": null,
+          "seconds_to_decision": 7,
+          "final_status": "FINALIZED"
+        },
+        {
+          "at": "2026-11-16T21:06:24.783Z",
+          "key": "balance-author",
+          "ok": false,
+          "owed": "5000000000000000000",
+          "before": "14949764108249974590",
+          "after": "14999559171499985885",
+          "net_fee": "151306000002823",
+          "expected": "19949612802249971767",
+          "difference": "-4950053630749985882"
+        },
+        {
+          "at": "2026-11-16T21:07:04.586Z",
+          "key": "joiner-withdraw",
+          "method": "withdraw",
+          "account": "review_joiner_rp1",
+          "from": "0x97Cd5c79DeAA859194d2044c02A7A10759Fd83F7",
+          "args": [],
+          "value": "0",
+          "hash": "0x39f345bfe6835fbbc8b3c16a1acfd0276ffbb8920cefbb855b251d0004b5905f",
+          "ok": true,
+          "status": "ACCEPTED",
+          "execution": "SUCCESS",
+          "returned": 5000000000000000000,
+          "refusal": null,
+          "seconds_to_decision": 7,
+          "final_status": "FINALIZED"
+        },
+        {
+          "at": "2026-11-16T21:07:05.411Z",
+          "key": "balance-joiner",
+          "ok": false,
+          "owed": "5000000000000000000",
+          "before": "14999449446999980239",
+          "after": "19999323141249977416",
+          "net_fee": "151305750002823",
+          "expected": "19999298141249977416",
+          "difference": "25000000000000"
+        },
+        {
+          "at": "2026-11-16T21:07:07.918Z",
+          "key": "page-thread",
+          "ok": true,
+          "url": "https://restate-genlayer.vercel.app/t/20",
+          "http": 200
+        },
+        {
+          "at": "2026-11-16T21:07:08.263Z",
+          "key": "page-turn",
+          "ok": true,
+          "url": "https://restate-genlayer.vercel.app/t/20/turn/1",
+          "http": 200
         }
       ],
       "accounts": {
@@ -109,6 +355,133 @@
         "nonces_at_start": {
           "author": 0,
           "joiner": 0
+        }
+      },
+      "finished": "2026-11-16T21:07:08.264Z",
+      "reconciled": {
+        "at": "2026-11-16T21:07:35.941Z",
+        "author": {
+          "address": "0x128a32aEC091119d3A26fB39C34f3Abe859781E4",
+          "faucet": "20000000000000000000",
+          "received": "5000000000000000000",
+          "sent": "5000000000000000000",
+          "fees": "465828500014115",
+          "expected": "19999534171499985885",
+          "actual": "19999559171499985885",
+          "exact": false,
+          "difference": "25000000000000",
+          "message_fee_consumed": "25000000000000",
+          "expected_without_message_fee": "19999559171499985885",
+          "exact_without_message_fee": true,
+          "transactions": [
+            {
+              "key": "open-thread",
+              "hash": "0xd9a53c1dd4c6a9246ca3353f706348ca94097757ed4bd74dc04ed088b8db8294",
+              "value": "5000000000000000000",
+              "net_fee": "78633750002823",
+              "message_fee_consumed": "0"
+            },
+            {
+              "key": "contest1",
+              "hash": "0x69c880863111aee6c30096457aef594972f8e6ce52c112e86b10f050e59fa212",
+              "value": "0",
+              "net_fee": "78629000002823",
+              "message_fee_consumed": "0"
+            },
+            {
+              "key": "contest2",
+              "hash": "0x406ebcf4b3fca41af14b37e93420ab8ed4ed8dd1c0979065d3f1f3cdcba3e5b5",
+              "value": "0",
+              "net_fee": "78629000002823",
+              "message_fee_consumed": "0"
+            },
+            {
+              "key": "restate-reply",
+              "hash": "0x8c77c2006d03da3bf1a83b65b5ed23869b0b0bf9558d3c66edb9cdb7ab581362",
+              "value": "0",
+              "net_fee": "78630750002823",
+              "message_fee_consumed": "0"
+            },
+            {
+              "key": "author-withdraw",
+              "hash": "0xe84e4efdca18dd801ecb59160524c91e39d347eae613fe6ed0a096ae8c4f841d",
+              "value": "0",
+              "net_fee": "151306000002823",
+              "message_fee_consumed": "25000000000000"
+            }
+          ]
+        },
+        "joiner": {
+          "address": "0x97Cd5c79DeAA859194d2044c02A7A10759Fd83F7",
+          "faucet": "20000000000000000000",
+          "received": "5000000000000000000",
+          "sent": "5000000000000000000",
+          "fees": "701858750022584",
+          "expected": "19999298141249977416",
+          "actual": "19999323141249977416",
+          "exact": false,
+          "difference": "25000000000000",
+          "message_fee_consumed": "25000000000000",
+          "expected_without_message_fee": "19999323141249977416",
+          "exact_without_message_fee": true,
+          "transactions": [
+            {
+              "key": "join",
+              "hash": "0x7854f4908f2121c3ff33f3ddd20054a449749773ca2b7c45a05ef3942561b262",
+              "value": "5000000000000000000",
+              "net_fee": "78634500002823",
+              "message_fee_consumed": "0"
+            },
+            {
+              "key": "restate1",
+              "hash": "0xb3e48dc508468f99c74a06991981c72d02e6d0fb9b3a5764e6684a6d9d6e0379",
+              "value": "0",
+              "net_fee": "78629500002823",
+              "message_fee_consumed": "0"
+            },
+            {
+              "key": "judge1",
+              "hash": "0xfb533061f1b34fa3498fe53faa52f95cafe62ba98535c58802c1f8c13643af5b",
+              "value": "0",
+              "net_fee": "78706250002823",
+              "message_fee_consumed": "0"
+            },
+            {
+              "key": "restate2",
+              "hash": "0x0cb5ba366b755ecf11c8fc4112cca4019725723b25fe29ce8bd4096568557ec8",
+              "value": "0",
+              "net_fee": "78631500002823",
+              "message_fee_consumed": "0"
+            },
+            {
+              "key": "judge2",
+              "hash": "0xca1d97b85c17b2a0089698e4c0b828b051561faf46e958a78bb8102176de76b0",
+              "value": "0",
+              "net_fee": "78685750002823",
+              "message_fee_consumed": "0"
+            },
+            {
+              "key": "reply",
+              "hash": "0x1f90e11c5f6f14eebdbe48086489186e322a2175c56692173623c0113801eef7",
+              "value": "0",
+              "net_fee": "78633000002823",
+              "message_fee_consumed": "0"
+            },
+            {
+              "key": "confirm-reply",
+              "hash": "0x8cefcfda33dfd6a0c3700fcc14e8fc6b3a768bc8630bb33a2c241fc93a6908e4",
+              "value": "0",
+              "net_fee": "78632500002823",
+              "message_fee_consumed": "0"
+            },
+            {
+              "key": "joiner-withdraw",
+              "hash": "0x39f345bfe6835fbbc8b3c16a1acfd0276ffbb8920cefbb855b251d0004b5905f",
+              "value": "0",
+              "net_fee": "151305750002823",
+              "message_fee_consumed": "25000000000000"
+            }
+          ]
         }
       }
     }

@@ -1,0 +1,15 @@
+{
+  "Contract": "https://explorer-studio-dev.genlayer.com/address/0xC7B813381315Dd77842597e68817F5d4704AbA44",
+  "Deploy tx": "https://explorer-studio-dev.genlayer.com/tx/0xac1222ba0279aead0d8f454bfebe02d2f3bfdb9a927cd1151af4b5a8a70703b2",
+  "Live run: open_thread": "https://explorer-studio-dev.genlayer.com/tx/0xd9a53c1dd4c6a9246ca3353f706348ca94097757ed4bd74dc04ed088b8db8294",
+  "Live run: strawman restatement": "https://explorer-studio-dev.genlayer.com/tx/0xb3e48dc508468f99c74a06991981c72d02e6d0fb9b3a5764e6684a6d9d6e0379",
+  "Live run: judge, DISTORTED": "https://explorer-studio-dev.genlayer.com/tx/0xfb533061f1b34fa3498fe53faa52f95cafe62ba98535c58802c1f8c13643af5b",
+  "Live run: judge, FAIR": "https://explorer-studio-dev.genlayer.com/tx/0xca1d97b85c17b2a0089698e4c0b828b051561faf46e958a78bb8102176de76b0",
+  "Live run: reply": "https://explorer-studio-dev.genlayer.com/tx/0x1f90e11c5f6f14eebdbe48086489186e322a2175c56692173623c0113801eef7",
+  "Live run: withdraw (author)": "https://explorer-studio-dev.genlayer.com/tx/0xe84e4efdca18dd801ecb59160524c91e39d347eae613fe6ed0a096ae8c4f841d",
+  "Seed: forfeit by tries, second judge": "https://explorer-studio-dev.genlayer.com/tx/0xc7d59ac603699a351b4cba42ede832b1d3502be5c3e2cd9c045f239ae3a30f0d",
+  "Golden case 6 (strawman), DISTORTED": "https://explorer-studio-dev.genlayer.com/tx/0x49292354ac47fd8a3db0a25b6231f3ef09d57dff9b36cc2d4d9980a778062044",
+  "Golden case 10 (instruction in the text), DISTORTED": "https://explorer-studio-dev.genlayer.com/tx/0x11718e68b915f4509e18ab5544d2f0a74e4e220c6f5d4263927d6738bb55c7d5",
+  "Golden results": "https://github.com/meitipro/restate/blob/main/eval/results.md",
+  "Mutation table": "https://github.com/meitipro/restate/blob/main/docs/MUTATIONS.md"
+}

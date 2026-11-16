@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 
 import { CHAIN_HEX } from '@/lib/genlayer-core.mjs';
@@ -156,9 +157,14 @@ export function WalletButton() {
     );
   }
   return (
-    <span className="c-pill" title={w.account}>
-      <span className="mono">{short(w.account)}</span>
-      {w.balance !== null && <span className="c-faint">{gen(w.balance)}</span>}
+    <span className="flex items-center gap-2">
+      <Link href="/me" className="c-btn small ghost">
+        My threads
+      </Link>
+      <span className="c-pill" title={w.account}>
+        <span className="mono">{short(w.account)}</span>
+        {w.balance !== null && <span className="c-faint">{gen(w.balance)}</span>}
+      </span>
     </span>
   );
 }

@@ -6,4 +6,5 @@
 - [x] Golden restatements through real consensus, 8 of 10, held-out H1 to H3 once
 - [x] Site: landing, thread, restate, verdict, open a thread, my threads; docs with generated reference
 - [x] Seed: a distorted try then a fair one, a confirmed thread, an open thread, a forfeit by tries (`docs/seed.studio-next.log`)
-- [ ] Repository, Vercel, live reviewer path, portal fields
+- [x] Repository, Vercel, live reviewer path (`docs/reviewer-path.studio-next.json`), portal fields
+- [ ] Make the repository public (see HANDOFF.md)

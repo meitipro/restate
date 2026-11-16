@@ -1,0 +1,53 @@
+# Portal entry
+
+Copy-ready. Fields and limits come from the build spec; `python scripts/count_submission.py` checks the counts.
+
+## Project name
+
+Restate
+
+## Tags
+
+Social, Group Consensus, Governance
+
+## One-liner
+
+You cannot answer until you have restated them fairly: a debate tool checked by validators.
+
+## Description
+
+Restate is a fair-restatement debate tool on GenLayer. One side posts a position with a deposit, and the other must restate it in their own words before they may answer. The author confirms the restatement or contests it. Validators label a contested restatement FAIR, INCOMPLETE or DISTORTED against the original, without judging who is right, and must agree on that one label. Only a FAIR one unlocks the reply, and the contract applies the lock, the two tries and the deposits from the label. Live on Studio Next, with golden restatements run through real consensus and published as they came out, misses included.
+
+## Step 1: Open a thread
+
+Open https://restate-genlayer.vercel.app/new, select Connect wallet, then Switch network and Get test GEN. Write a topic and a position, choose a window and a 5 GEN deposit, then select Open the thread and confirm. Or skip this and open any thread in Recent threads on the home page.
+
+## Step 2: Join and restate
+
+From a second wallet, open the thread, select Join and confirm, then select Restate. Write the position in your own words, for example They think tokens are bad and want everyone paid in dollars, then select Post my restatement and confirm.
+
+## Step 3: Contest it
+
+As the author, open the thread and select Contest it, then select Send it to the validators. The page shows Validators are reading, then the label with the failed try struck through. The reply box stays locked.
+
+## Step 4: Try again until it is fair
+
+Restate again with every main point and nothing added. A FAIR label unlocks the reply. A restatement gets two tries, and the second failure forfeits the deposit to the other side.
+
+## Step 5: Reply and withdraw
+
+Post the reply, and the author restates it in turn. When both restatements are FAIR the thread is done. Open My threads and select Withdraw to take your deposit back.
+
+## Proof
+
+Walked on the live site from two fresh accounts through its own signing code: faucet, open_thread, join, a strawman restatement labelled DISTORTED with the reply still locked, a full restatement labelled FAIR, the reply, the author restating it, the replier confirming, then both withdrawals. Balances reconcile to the wei apart from one payout-message fee that was not charged. To confirm a write, read the leader result in the settling transaction: execution_result SUCCESS, not just ACCEPTED. Golden restatements: 8 of 10 matched through real consensus; the two misses are English restatements expected FAIR that came back INCOMPLETE. Held-out: H1 DISTORTED, H2 FAIR, H3 INCOMPLETE, judged once. 65 of 65 mutants caught.
+
+## Steward note
+
+Known limits: Restate checks that a restatement is fair, not that a position is right. Reasons are not stored, only the label. Two tries means a good-faith misreading can cost a deposit, and the author can always confirm. The spec contradicts itself on tries and on unjoined threads; the choices are documented. The runtime header is the GenVM v0.4 runner, which the live network now requires. A duplicate eval runner is recorded in eval/results.md.
+
+## Links
+
+- Website: https://restate-genlayer.vercel.app
+- GitHub: https://github.com/meitipro/restate
+- Logo: submission/restate-icon-512.png
