@@ -1,0 +1,7 @@
+accounts: {"author":"0x128a32aEC091119d3A26fB39C34f3Abe859781E4","joiner":"0x97Cd5c79DeAA859194d2044c02A7A10759Fd83F7"} nonces at start {"author":0,"joiner":0}
+faucet-author: HTTP 200 0 GEN -> 20 GEN 
+faucet-joiner: HTTP 200 0 GEN -> 20 GEN 
+open-thread: open_thread ok in 12 s  0xd9a53c1dd4c6a9246ca3353f706348ca94097757ed4bd74dc04ed088b8db8294
+join: join ok in 7 s  0x7854f4908f2121c3ff33f3ddd20054a449749773ca2b7c45a05ef3942561b262
+restate1: restate ok in 8 s  0xb3e48dc508468f99c74a06991981c72d02e6d0fb9b3a5764e6684a6d9d6e0379
+contest1: contest ok in 7 s  0x69c880863111aee6c30096457aef594972f8e6ce52c112e86b10f050e59fa212

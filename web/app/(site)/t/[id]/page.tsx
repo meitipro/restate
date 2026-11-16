@@ -92,7 +92,7 @@ export default async function ThreadPage(props: PageProps<'/t/[id]'>) {
     ['03', 'You answer', k.turns.length >= 2],
     ['04', 'They restate you', k.turns[1]?.status === 'FAIR'],
   ] as const;
-  const current = k.status === 'DONE' ? 4 : k.phase === 'REPLY' ? 2 : k.turn === 2 ? 3 : k.status === 'OPEN' ? 0 : 1;
+  const current = k.status === 'DONE' ? 5 : k.phase === 'REPLY' ? 2 : k.turn === 2 ? 3 : k.status === 'OPEN' ? 0 : 1;
   return (
     <div className="c-wrap py-12">
       <p className="c-eyebrow">Thread {k.id} · opened {dayTime(k.created_at)}</p>
@@ -173,7 +173,6 @@ export default async function ThreadPage(props: PageProps<'/t/[id]'>) {
                 </>
               )}
               <div><dt>Window</dt><dd>{plural(k.window_h, 'hour')} per step</dd></div>
-              <div><dt>Back when</dt><dd>both turns are FAIR</dd></div>
             </dl>
           </section>
         </aside>

@@ -105,7 +105,7 @@ export default async function Landing() {
               <p className="mt-3 text-[15.5px] leading-relaxed">
                 {aid.points.map((p, i) => (
                   <span key={i} className="underline decoration-[var(--violet-line)] underline-offset-4">
-                    {p.text}
+                    {p.text.replace(/[.!?]+$/, '')}
                     {i < aid.points.length - 1 ? '. ' : '.'}
                   </span>
                 ))}

@@ -1,0 +1,116 @@
+{
+  "runs": {
+    "rp1": {
+      "site": "https://restate-genlayer.vercel.app",
+      "contract": "0xC7B813381315Dd77842597e68817F5d4704AbA44",
+      "started": "2026-11-16T21:03:40.438Z",
+      "steps": [
+        {
+          "at": "2026-11-16T21:03:48.384Z",
+          "key": "faucet-author",
+          "ok": true,
+          "http": 200,
+          "sent_address": "0x128a32aec091119d3a26fb39c34f3abe859781e4",
+          "answered_address": "0x128a32aEC091119d3A26fB39C34f3Abe859781E4",
+          "before": "0",
+          "after": "20000000000000000000",
+          "read_after": "20000000000000000000"
+        },
+        {
+          "at": "2026-11-16T21:03:51.675Z",
+          "key": "faucet-joiner",
+          "ok": true,
+          "http": 200,
+          "sent_address": "0x97cd5c79deaa859194d2044c02a7a10759fd83f7",
+          "answered_address": "0x97Cd5c79DeAA859194d2044c02A7A10759Fd83F7",
+          "before": "0",
+          "after": "20000000000000000000",
+          "read_after": "20000000000000000000"
+        },
+        {
+          "at": "2026-11-16T21:04:03.903Z",
+          "key": "open-thread",
+          "method": "open_thread",
+          "account": "review_author_rp1",
+          "from": "0x128a32aEC091119d3A26fB39C34f3Abe859781E4",
+          "args": [
+            "Reviewer path rp1: stablecoin pay",
+            "Quarterly stablecoin pay beats token pay for contributors...",
+            12
+          ],
+          "value": "5000000000000000000",
+          "hash": "0xd9a53c1dd4c6a9246ca3353f706348ca94097757ed4bd74dc04ed088b8db8294",
+          "ok": true,
+          "status": "ACCEPTED",
+          "execution": "SUCCESS",
+          "returned": 20,
+          "refusal": null,
+          "seconds_to_decision": 12
+        },
+        {
+          "at": "2026-11-16T21:04:10.943Z",
+          "key": "join",
+          "method": "join",
+          "account": "review_joiner_rp1",
+          "from": "0x97Cd5c79DeAA859194d2044c02A7A10759Fd83F7",
+          "args": [
+            20
+          ],
+          "value": "5000000000000000000",
+          "hash": "0x7854f4908f2121c3ff33f3ddd20054a449749773ca2b7c45a05ef3942561b262",
+          "ok": true,
+          "status": "ACCEPTED",
+          "execution": "SUCCESS",
+          "returned": 20,
+          "refusal": null,
+          "seconds_to_decision": 7
+        },
+        {
+          "at": "2026-11-16T21:04:18.647Z",
+          "key": "restate1",
+          "method": "restate",
+          "account": "review_joiner_rp1",
+          "from": "0x97Cd5c79DeAA859194d2044c02A7A10759Fd83F7",
+          "args": [
+            20,
+            "They think tokens are bad and want everyone paid in dollars."
+          ],
+          "value": "0",
+          "hash": "0xb3e48dc508468f99c74a06991981c72d02e6d0fb9b3a5764e6684a6d9d6e0379",
+          "ok": true,
+          "status": "ACCEPTED",
+          "execution": "SUCCESS",
+          "returned": 1,
+          "refusal": null,
+          "seconds_to_decision": 8
+        },
+        {
+          "at": "2026-11-16T21:04:25.936Z",
+          "key": "contest1",
+          "method": "contest",
+          "account": "review_author_rp1",
+          "from": "0x128a32aEC091119d3A26fB39C34f3Abe859781E4",
+          "args": [
+            20
+          ],
+          "value": "0",
+          "hash": "0x69c880863111aee6c30096457aef594972f8e6ce52c112e86b10f050e59fa212",
+          "ok": true,
+          "status": "ACCEPTED",
+          "execution": "SUCCESS",
+          "returned": 1,
+          "refusal": null,
+          "seconds_to_decision": 7
+        }
+      ],
+      "accounts": {
+        "author": "0x128a32aEC091119d3A26fB39C34f3Abe859781E4",
+        "joiner": "0x97Cd5c79DeAA859194d2044c02A7A10759Fd83F7",
+        "nonces_at_start": {
+          "author": 0,
+          "joiner": 0
+        }
+      }
+    }
+  }
+}
