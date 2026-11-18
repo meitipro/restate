@@ -40,7 +40,7 @@ Post the reply, and the author restates it in turn. When both restatements are F
 
 ## Proof
 
-Walked on the live site from two fresh accounts through its own signing code: faucet, open_thread, join, a strawman restatement labelled DISTORTED with the reply still locked, a full restatement labelled FAIR, the reply, the author restating it, the replier confirming, then both withdrawals. Balances reconcile to the wei apart from one payout-message fee that was not charged. To confirm a write, read the leader result in the settling transaction: execution_result SUCCESS, not just ACCEPTED. Golden restatements: 8 of 10 matched through real consensus; the two misses are English restatements expected FAIR that came back INCOMPLETE. Held-out: H1 DISTORTED, H2 FAIR, H3 INCOMPLETE, judged once. 65 of 65 mutants caught.
+Walked on the live site from two fresh accounts: open_thread, join, a strawman restatement labelled DISTORTED (reply stayed locked), a full one labelled FAIR, the reply, the author's restatement, confirm, then both withdrawals; balances match to the wei apart from one uncharged payout-message fee. Golden: 8 of 10 matched through real consensus, both misses published. Held-out: H1 DISTORTED, H2 FAIR, H3 INCOMPLETE. 65 of 65 mutants caught. A write counts only when execution_result is SUCCESS.
 
 ## Steward note
 
