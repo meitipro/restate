@@ -25,6 +25,11 @@
   --violet-line: rgb(129 140 248 / 0.38);
   --on-violet: #14143a;
   --danger: #f2a7a7;
+  --amber: #e8b04b;
+  --amber-line: rgb(232 176 75 / 0.45);
+  --coral: #f0716b;
+  --coral-line: rgb(240 113 107 / 0.45);
+  --grid: #15151b;
   --radius: 4px;
   --font-sans: 'Outfit', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -233,16 +238,14 @@ body {
   }
   .c-h1 {
     font-size: clamp(40px, 6.4vw, 72px);
-    line-height: 1.02;
-    letter-spacing: -0.035em;
-    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    font-weight: 800;
   }
   .c-h1 em {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-weight: 400;
+    font-style: normal;
+    font-weight: 800;
     color: var(--violet);
-    letter-spacing: -0.01em;
   }
   .c-h2 {
     font-size: clamp(26px, 3.4vw, 36px);
@@ -503,16 +506,17 @@ body {
   }
 }
 
-/* -- Doorman results: sky for passed, hatched for retry, grey and struck through
-      for locked, dotted for expired. ------------------------------------- */
+/* -- Restate verdicts: indigo for FAIR, amber for INCOMPLETE, coral for DISTORTED,
+      dotted for a forfeit. The failed text itself is struck through on the page. ---- */
 .c-verdict.retry {
-  color: var(--ink);
-  background-image: repeating-linear-gradient(135deg, rgb(129 140 248 / 0.18) 0 4px, transparent 4px 9px);
-  border-color: var(--violet-line);
+  color: var(--amber);
+  background: rgb(232 176 75 / 0.08);
+  border-color: var(--amber-line);
 }
 .c-verdict.locked {
-  text-decoration: line-through;
-  color: var(--ink-3);
+  color: var(--coral);
+  background: rgb(240 113 107 / 0.08);
+  border-color: var(--coral-line);
 }
 .c-verdict.expired {
   border-style: dotted;
@@ -575,4 +579,284 @@ body {
 }
 .c-ladder-row.on {
   background: var(--violet-soft);
+}
+
+/* -- The redesign: a grid ground, a split screen with a seal, a five step rail, label cards. ---- */
+.c-hero {
+  border-bottom: 1px solid var(--line);
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 56px 56px;
+  background-position: -1px -1px;
+}
+.c-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--violet);
+  border: 1px solid #2b2d52;
+  background: #101124;
+  border-radius: var(--radius);
+  padding: 7px 14px;
+}
+.c-display {
+  font-weight: 800;
+  font-size: clamp(44px, 8.4vw, 96px);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+.c-display .acc {
+  color: var(--violet);
+}
+.c-h2x {
+  font-weight: 700;
+  font-size: clamp(32px, 4.6vw, 56px);
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+}
+.c-btn.big {
+  height: 52px;
+  padding: 0 26px;
+  font-size: 17px;
+}
+.c-split {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  text-align: left;
+}
+.c-split-card {
+  flex: 1 1 420px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 28px 30px;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+}
+.c-split-card.mine {
+  border-color: var(--violet);
+}
+.c-split-card p {
+  margin: 0;
+  font-size: clamp(17px, 1.7vw, 21px);
+  line-height: 1.65;
+}
+.c-split-mid {
+  flex: 0 0 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 0;
+}
+.c-split-mid .wire-end {
+  display: none;
+}
+.c-split-mid .wire {
+  flex: 1;
+  min-height: 30px;
+  border-left: 2px dashed #34344a;
+}
+.c-seal {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  border: 2px solid var(--violet);
+  background: #101124;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-family: var(--font-mono);
+}
+.c-seal b {
+  font-size: 22px;
+  letter-spacing: 0.04em;
+  color: var(--violet);
+}
+.c-seal span {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--ink-2);
+}
+@media (max-width: 1100px) {
+  .c-split-mid {
+    flex: 0 0 auto;
+    flex-direction: row;
+    width: 100%;
+    padding: 0;
+  }
+  .c-split-mid .wire {
+    border-left: 0;
+    border-top: 2px dashed #34344a;
+    min-height: 0;
+    height: 0;
+  }
+  .c-split-mid .seal-note {
+    display: none;
+  }
+  .c-split-mid .wire-end {
+    display: block;
+    flex: 1;
+    border-left: 0;
+    border-top: 2px dashed #34344a;
+    min-height: 0;
+    height: 0;
+  }
+  .c-seal {
+    width: 104px;
+    height: 104px;
+    margin: 12px;
+  }
+  .c-seal span {
+    font-size: 8.5px;
+    letter-spacing: 0.04em;
+  }
+}
+.c-hl {
+  border-bottom: 2px solid var(--violet);
+}
+.c-tick {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--violet);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.c-rail5 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.c-rail5 > div {
+  flex: 1 1 165px;
+  padding: 24px 22px;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-left-width: 0;
+}
+.c-rail5 > div:first-child {
+  border-left-width: 1px;
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+.c-rail5 > div:last-child {
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.c-rail5 > div.on {
+  border-color: var(--violet);
+  background: #101124;
+}
+.c-rail5 > div.lock {
+  border-style: dashed;
+  border-color: #4a4a5a;
+  background: var(--bg);
+}
+@media (max-width: 900px) {
+  .c-rail5 > div {
+    border-left-width: 1px;
+    border-radius: 0 !important;
+    margin-top: -1px;
+  }
+}
+.c-labcard {
+  flex: 1 1 320px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-top-width: 3px;
+  border-radius: var(--radius);
+}
+.c-labcard.fair {
+  border-top-color: var(--violet);
+}
+.c-labcard.inc {
+  border-top-color: var(--amber);
+}
+.c-labcard.dis {
+  border-top-color: var(--coral);
+}
+.c-labcard blockquote {
+  margin: auto 0 0;
+  padding: 2px 0 2px 14px;
+  border-left: 2px solid currentColor;
+  font-size: 15.5px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.c-stats {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+}
+.c-stats > div {
+  flex: 1 1 200px;
+  padding: 22px 24px;
+  border-right: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
+}
+.c-stats b {
+  display: block;
+  font-weight: 800;
+  font-size: 44px;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+.c-stats span {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--ink-2);
+}
+.c-ledger-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: baseline;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+.c-ledger-row:last-child {
+  border-bottom: 0;
+}
+.c-lock {
+  border: 1px dashed #4a4a5a;
+  border-radius: var(--radius);
+  background: var(--bg);
+  padding: 26px 28px;
+}
+.c-try {
+  border: 1px solid var(--line-strong);
+  border-left-width: 3px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: 22px 26px;
+}
+.c-try.dis {
+  border-left-color: var(--coral);
+  background: #0f0f14;
+}
+.c-try.inc {
+  border-left-color: var(--amber);
+  background: #0f0f14;
+}
+.c-try.fair {
+  border-color: var(--violet);
+}
+.c-struck {
+  text-decoration: line-through;
+  text-decoration-color: var(--coral);
+  color: var(--ink-2);
 }

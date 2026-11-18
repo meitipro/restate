@@ -2,15 +2,15 @@ import Link from 'next/link';
 
 import { WalletButton } from './Wallet';
 
-/** The site's mark: two speech bubbles facing each other, one restating the other, on an indigo ground. The same drawing as docs/brand/restate-icon.svg. */
+/** The site's mark: two speech bubbles, one restating the other, with a check. The same drawing as docs/brand/restate-icon.svg. */
 export function Mark({ size = 26 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 512 512" aria-hidden style={{ flexShrink: 0 }}>
-      <rect x="106" y="106" width="300" height="300" rx="46" fill="#818cf8" />
-      <rect x="146" y="158" width="150" height="86" rx="22" fill="#14143a" />
-      <path d="M176 244 L176 276 L208 244 Z" fill="#14143a" />
-      <rect x="216" y="268" width="150" height="86" rx="22" fill="#14143a" />
-      <path d="M336 354 L336 386 L304 354 Z" fill="#14143a" />
+      <rect x="64" y="92" width="260" height="190" rx="46" fill="#475569" />
+      <polygon points="116,276 116,352 196,276" fill="#475569" />
+      <rect x="196" y="196" width="260" height="190" rx="46" fill="#818cf8" stroke="#0b0b0e" strokeWidth="16" />
+      <polygon points="404,378 404,454 324,378" fill="#818cf8" />
+      <polyline points="276,288 322,334 396,238" fill="none" stroke="#0b0b0e" strokeWidth="28" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
