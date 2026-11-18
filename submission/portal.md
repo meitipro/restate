@@ -8,7 +8,7 @@ Restate
 
 ## Tags
 
-Social, Group Consensus, Governance
+Social, Group Consensus, Community Moderation
 
 ## One-liner
 

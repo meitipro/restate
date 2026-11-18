@@ -2,7 +2,7 @@
   "Project name": "Restate",
   "Primary tag": "Social",
   "Tag 1": "Group Consensus",
-  "Tag 2": "Governance",
+  "Tag 2": "Community Moderation",
   "One-liner": "You cannot answer until you have restated them fairly: a debate tool checked by validators.",
   "Description": "Restate is a fair-restatement debate tool on GenLayer. One side posts a position with a deposit, and the other must restate it in their own words before they may answer. The author confirms the restatement or contests it. Validators label a contested restatement FAIR, INCOMPLETE or DISTORTED against the original, without judging who is right, and must agree on that one label. Only a FAIR one unlocks the reply, and the contract applies the lock, the two tries and the deposits from the label. Live on Studio Next, with golden restatements run through real consensus and published as they came out, misses included.",
   "Step 1 title": "Open a thread",
